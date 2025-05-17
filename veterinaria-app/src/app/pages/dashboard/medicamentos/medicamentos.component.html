@@ -1,0 +1,18 @@
+<h2>Listado de Medicamentos</h2>
+
+<!-- Notificación de desabasto -->
+<div *ngIf="medicamentosEnDesabasto.length > 0" style="background-color: #fff3cd; border: 1px solid #ffeeba; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: #856404;">
+  <strong>⚠️ Atención:</strong> Los siguientes medicamentos están en desabasto:
+  <ul>
+    <li *ngFor="let m of medicamentosEnDesabasto">
+      {{ m.nombre }} ({{ m.disponible }} unidades)
+    </li>
+  </ul>
+</div>
+
+<!-- Lista de medicamentos -->
+<ul>
+  <li *ngFor="let m of medicamentos">
+    {{ m.nombre }} - Disponible: {{ m.disponible }} unidades
+  </li>
+</ul>

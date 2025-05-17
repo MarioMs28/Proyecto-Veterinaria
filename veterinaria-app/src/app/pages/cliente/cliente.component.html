@@ -1,0 +1,24 @@
+<div class="contenedor-cliente">
+  <h2>Bienvenido, Cliente</h2>
+
+  <div class="botones-formularios">
+    <button (click)="mostrarFormulario('agenda')">Agregar Agenda</button>
+    <button (click)="mostrarFormulario('contradicciones')">Reportar Contradicción</button>
+  </div>
+
+  <form *ngIf="formularioActivo === 'agenda'" (ngSubmit)="enviarAgenda()" #agendaForm="ngForm">
+    <h3>Formulario de Agenda</h3>
+    <input type="text" placeholder="Tu nombre" [(ngModel)]="agenda.nombre" name="nombre" required />
+    <input type="text" placeholder="Nombre de la mascota" [(ngModel)]="agenda.mascota" name="mascota" required />
+    <input type="text" placeholder="Motivo de la cita" [(ngModel)]="agenda.motivo" name="motivo" required />
+    <button type="submit">Enviar</button>
+  </form>
+
+  <form *ngIf="formularioActivo === 'contradicciones'" (ngSubmit)="enviarContradiccion()" #contraForm="ngForm">
+    <h3>Formulario de Contradicciones</h3>
+    <input type="text" placeholder="Tu nombre" [(ngModel)]="contradiccion.nombre" name="nombreC" required />
+    <input type="text" placeholder="Nombre de la mascota" [(ngModel)]="contradiccion.mascota" name="mascotaC" required />
+    <input type="text" placeholder="Problema de salud" [(ngModel)]="contradiccion.problema" name="problema" required />
+    <button type="submit">Enviar</button>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+h2 {
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #e6f2ff;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alerta {
+  color: #e74c3c;
+  font-weight: bold;
+}

@@ -1,0 +1,9 @@
+<h2>Agenda de Citas</h2>
+<ul>
+  <li *ngFor="let cita of citas">
+    <strong>{{ cita.cliente }}</strong> - Mascota: {{ cita.mascota }} <br>
+    Fecha: {{ cita.fecha }} - Hora: {{ cita.hora }} <br>
+    Motivo: {{ cita.motivo }}
+    <hr>
+  </li>
+</ul>

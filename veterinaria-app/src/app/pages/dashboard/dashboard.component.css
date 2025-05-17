@@ -1,0 +1,58 @@
+/* Contenedor principal del dashboard */
+.dashboard-container {
+  min-height: 100vh; /* Altura mínima del 100% del alto de la pantalla */
+  display: flex; /* Usamos flexbox para alinear el contenido */
+  flex-direction: column; /* Los elementos se colocan en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: flex-start; /* Alinea los elementos al inicio (arriba) */
+  padding: 40px 20px; /* Espacio interior (arriba/abajo 40px, lados 20px) */
+  background: linear-gradient(145deg, #f5f7fa, #c3cfe2); /* Fondo con degradado diagonal */
+  font-family: 'Segoe UI', sans-serif; /* Fuente moderna y legible */
+}
+
+/* Título principal del dashboard */
+.dashboard-title {
+  font-size: 40px; /* Tamaño de fuente grande */
+  margin-bottom: 30px; /* Espacio inferior */
+  color: #333; /* Color oscuro para el texto */
+}
+
+/* Contenedor de los botones de navegación (Agenda, Medicamentos, Contradicciones) */
+.dashboard-buttons {
+  display: flex; /* Usamos flexbox para los botones */
+  gap: 50px; /* Espacio entre botones */
+  margin-bottom: 30px; /* Espacio inferior */
+  flex-wrap: wrap; /* Permite que los botones bajen si no caben */
+  justify-content: center; /* Centra los botones horizontalmente */
+}
+
+/* Estilo para los botones del dashboard */
+.dashboard-buttons button {
+ padding: 20px 40px;  /* Relleno interno del botón */
+  border: none; /* Sin borde */
+  border-radius: 15px; /* Bordes redondeados */
+  background: linear-gradient(to right, #4a90e2, #007aff); /* Degradado azul horizontal */
+  color: white; /* Texto blanco */
+  font-size: 20px; /* Tamaño del texto */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cursor tipo mano al pasar encima */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra suave debajo del botón */
+  transition: background 0.3s, transform 0.2s; /* Transiciones suaves para hover */
+  min-width: 220px; /* Ancho mínimo del botón */
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+.dashboard-buttons button:hover {
+  background: linear-gradient(to right, #3a7bd5, #005ecb); /* Degradado más oscuro */
+  transform: scale(1.05); /* Hace un zoom leve al pasar el mouse */
+}
+
+/* Contenedor del contenido que cambia (agenda, medicamentos, contradicciones) */
+.dashboard-content {
+  width: 100%; /* Ancho completo disponible */
+  max-width: 800px; /* Máximo ancho */
+  background-color: white; /* Fondo blanco para resaltar */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 30px; /* Relleno interno */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}

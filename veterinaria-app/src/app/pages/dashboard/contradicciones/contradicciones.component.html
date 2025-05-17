@@ -1,0 +1,8 @@
+<h2>Contradicciones Registradas</h2>
+<ul>
+  <li *ngFor="let c of contradicciones">
+    <strong>{{ c.cliente }}</strong> - Mascota: {{ c.mascota }} <br>
+    Motivo de la consulta: {{ c.motivo }}
+    <hr>
+  </li>
+</ul>

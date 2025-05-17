@@ -1,0 +1,15 @@
+<div class="dashboard-container">
+  <h2 class="dashboard-title">Panel Principal</h2>
+
+  <div class="dashboard-buttons">
+    <button (click)="mostrarSeccion('agenda')">📅 Agenda</button>
+    <button (click)="mostrarSeccion('medicamentos')">💊 Medicamentos</button>
+    <button (click)="mostrarSeccion('contradicciones')">⚠️ Contradicciones</button>
+  </div>
+
+  <div class="seccion-contenido">
+    <app-agenda *ngIf="seccionActual === 'agenda'"></app-agenda>
+    <app-medicamentos *ngIf="seccionActual === 'medicamentos'"></app-medicamentos>
+    <app-contradicciones *ngIf="seccionActual === 'contradicciones'"></app-contradicciones>
+  </div>
+</div>
